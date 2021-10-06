@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+html{font-size: 16px;}
+.container-cus{
+    width: 95%;
+    margin: auto;
+}
+.scroll-hand{overflow: hidden;}
+header{
+    border-bottom:1px solid silver ;
+    position: relative;
+}
+.header{display: flex;}
+.header .h-logo{
+    width: 10%;
+    padding-right: 2em;
+}
+.header .h-logo img{
+    width: 100%;
+    height: 98%;
+}
+.header-r{width: 90%;}
+.h-menu-t{
+    height: 50%;
+    text-align: end;
+    border-bottom: 1px solid silver;
+    padding-right: 0.5em;
+}
+.h-menu-t div{
+    height: 100%;
+    line-height: 0em;
+}
+.h-menu-t a{
+    display: inline-block;
+    color: black;
+    height: 100%;
+    padding-top: 2em;
+    font-size: .8em;
+}
+.header .h-menu{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+}
+.header .h-menu .h-menu-right ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: .5em 0;
+}
+.header .h-menu .h-menu-right ul li{padding: 0 0.5em;}
+.header .h-menu .h-menu-right ul li a{color: black;}
+.header .h-menu .h-menu-left ul li{padding: 0 2em;}
+.header .h-menu .h-menu-left ul li.h-span{padding: 0;line-height: 29px;}
+.header .h-menu .h-logo-m{display: none;height: 100%;}
+.header .h-menu .h-logo-m img{height: 90%;}
+.header .h-menu .h-menu-left nav ul li a{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: .7em 0;
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+.header .h-menu .h-menu-left nav ul li:hover a{
+    border-bottom: 2px solid rgb(211, 11, 78);
+    color: rgb(211, 11, 78);
+}
+.header .h-menu .h-menu-left nav ul li:hover .h-menu-child{display: block;}
+
+.h-menu-child{
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 101%;
+    width: 100%;
+    padding: 0 1em;
+    border-bottom: 1px solid silver;
+    z-index: 99;
+    background-color: white;
+}
+.h-menu-child ul li{list-style: none;}
+.navbar-toggler{display: none;}
+/* search */
+.h-search{
+    position: absolute;
+    z-index: 9;
+    background: #fffffff7;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    display: none;
+}
+.h-close-search{
+    text-align: end;
+    padding: 1em 2em
+}
+.h-close-search .h-btn-close-search{color: black;}
+.h-search-content{
+    max-width: 986px;
+    padding: 0 69px;
+    margin: 0 auto;
+}
+.h-search-content h2{
+    text-align: center;
+    font-size: 2.5em;
+    color: #000;
+    font-weight: 600;
+    margin: 0 0 3rem 0;
+}
+.h-search-input{position: relative;}
+.h-search-input input{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.h-search-input .h-btn-search{
+    border: none;
+    background: transparent;
+    position: absolute;
+    font-size: 2em;
+    top: 20%;
+    right: 2%;
+    color: #bd4459;
+}
+.h-recently-head{
+    display: flex;
+    justify-content: space-between;
+}
+.h-keyword-field{padding: 4em 0;}
+.head-keyword{
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+.clear-keyword{font-size: 0.8em;}
+.h-keyword-field .h-recently-keyword{padding-right: 4em;}
+.h-keyword-field .most-searched{
+    border-left: 1px solid silver;
+    padding-left: 4em;
+}
+.most-searched .most-item a{
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px 5px;
+    color: black;
+    font-size: 0.8em;
+    text-decoration: none;
+    margin: 0 10px 5px 0;
+    display: inline-block;
+}
+#myBtnTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    background-color: #d3cdcd;
+    cursor: pointer;
+    border-radius: 50%;
+    background-image: url(../img/arrow-up-nightrider.svg);
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: center;
+    animation-name: scrollTop;
+    animation-duration: 1s;
+}
+@keyframes scrollTop {
+    from {right:0px}
+    to {right:20px}
+}
+/* footer */
+footer{background-color: #f5f5f5;}
+
+.footer-t p{
+    font-size: 12px;
+}
+.footer-m{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-m .f-national img{
+    width: 1em;
+    border-radius: 50%;
+    margin: 0  10px 4px 0;
+}
+.footer-m .f-national a{color: #000;}
+.footer-m .f-social ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.footer-m .f-social ul li{   
+    padding: 0 0.5rem;
+    font-size: 2em;
+}
+.footer-m .f-social ul li a{color: #000;}
+.footer{background-color: #333333;}
+.footer-b{
+    padding: 2em 0;
+    display: flex;
+}
+.footer-b ul{
+    display: flex;
+    list-style: none;
+}
+.footer-b-r{width: 80%;}
+.footer-b .footer-b-r ul li{padding-right: 2em;}
+.footer-b .footer-b-r ul li a{
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.footer-b p, .footer-b p a{
+    font-size: 12px;
+    margin: 0;
+    color: #b2b2b2;
+}
+.footer-b-l{width: 20%;}
+/* responsive */
+@media only screen and (min-width:1400px){
+    .container-cus{width: 86em;} 
+}
+@media only screen and (max-width:991px){
+    html{font-size: 14px;}
+    .container-header{width: 100%;}
+    .header .h-logo{display: none;}
+    .header-r{
+        width: 100%;
+        padding: 0;
+    }
+    .h-menu-t a{padding-top: 1em;}
+    .header .h-menu .h-menu-left ul li.h-span{display: none;}
+    .navbar-toggler{display: block;}
+    .header .h-menu .h-logo-m{display: block;}
+    .h-menu-left nav{
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+        background-color: white;
+    }
+    .h-menu-child{position: inherit;}
+    .footer-b{display: block;}
+    .footer-b-r{
+        margin-bottom: 2em;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:767px){
+    .h-search-content{padding: 0 2em;}
+    .h-keyword-field .most-searched{
+        padding-left: 15px;
+    }
+    .h-keyword-field .h-recently-keyword{padding-right: 15px;}
+}
+@media only screen and (max-width:575px){
+    html{font-size: 12px;}
+    .h-keyword-field .most-searched{
+        border: none;
+    }
+    .h-search-input input{text-align: start;}
+    .h-search-content h2{display: none;}
+    .footer-b ul{display: block;}
+}
