@@ -109,7 +109,7 @@ button.wishlistBtn:hover{
 }
 .star-prod a{
     display: flex;
-    width: 8em;
+    width: 7em;
     justify-content: center;
     margin: auto;
 }
@@ -160,6 +160,7 @@ button.wishlistBtn:hover{
     display: contents;
     cursor: pointer;
 }
+.btn-slick img{width: 1rem;}
 /* responsive */
 @media only screen and (max-width:991px){
     .product{width: 48%;}

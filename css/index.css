@@ -54,35 +54,55 @@ header{
 }
 .header .h-menu .h-menu-right ul li{padding: 0 0.5em;}
 .header .h-menu .h-menu-right ul li a{color: black;}
-.header .h-menu .h-menu-left ul li{padding: 0 2em;}
+.header .h-menu .h-menu-left>nav>div>ul>li{padding: 0 2em;}
 .header .h-menu .h-menu-left ul li.h-span{padding: 0;line-height: 29px;}
 .header .h-menu .h-logo-m{display: none;height: 100%;}
 .header .h-menu .h-logo-m img{height: 90%;}
-.header .h-menu .h-menu-left nav ul li a{
+.header .h-menu .h-menu-left>nav>div>ul>li>a{
     text-transform: uppercase;
     font-weight: 600;
     padding: .7em 0;
     color: black;
     border-bottom: 3px solid transparent;
 }
-.header .h-menu .h-menu-left nav ul li:hover a{
+.header .h-menu .h-menu-left>nav>div>ul>li:hover>a{
     border-bottom: 2px solid rgb(211, 11, 78);
     color: rgb(211, 11, 78);
 }
-.header .h-menu .h-menu-left nav ul li:hover .h-menu-child{display: block;}
-
+.header .h-menu .h-menu-left nav ul li:hover .hidden-menu-child{display: block;}
+.hidden-menu-child{
+    display: none;
+}
 .h-menu-child{
     position: absolute;
-    display: none;
     left: 0;
     top: 101%;
     width: 100%;
-    padding: 0 1em;
-    border-bottom: 1px solid silver;
+    padding: 3em 2em;
     z-index: 99;
     background-color: white;
 }
 .h-menu-child ul li{list-style: none;}
+.h-menu-child-item{
+    padding: 0 2em;
+    float: left;
+    width: 30%;
+}
+.h-menu-child-item>a{
+    color: #000;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+.h-menu-child-item>a.margin-a{margin-top: 1em;}
+
+.h-border-menu{border-left: 1px solid silver;}
+.h-menu-child-item ul li{padding: 0;}
+.h-menu-child-item ul li a{
+    color: #545454;
+    font-size: .9rem;
+}
 .navbar-toggler{display: none;}
 /* search */
 .h-search{
@@ -100,7 +120,10 @@ header{
     text-align: end;
     padding: 1em 2em
 }
-.h-close-search .h-btn-close-search{color: black;}
+.h-close-search .h-btn-close-search{
+    color: black;
+    font-size: 2em;
+}
 .h-search-content{
     max-width: 986px;
     padding: 0 69px;
